@@ -338,7 +338,7 @@ pub fn init_vex_fmt_verifying_visitor() -> Vec<(&'static str, Box<dyn Check>)> {
     ]
 }
 
-// #[cfg(test)]
+// #[cfg(tests)]
 // mod tests {
 //     use crate::verification::check::vex::{
 //         check_all_products_v11ies_exits_in_product_tree,
@@ -349,10 +349,10 @@ pub fn init_vex_fmt_verifying_visitor() -> Vec<(&'static str, Box<dyn Check>)> {
 //     use csaf::Csaf;
 //
 //     /// Verify notexits-7ComputeNode-7.7.EUS:microcode_ctl-2:2.1-53.18.el7_7.src does not exits in product tree
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_all_products_v11ies_exits_in_product_tree() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhsa-2021_3029.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhsa-2021_3029.json"))
 //                 .expect("example data must parse");
 //         assert!(check_all_products_v11ies_exits_in_product_tree(&csaf)
 //             .first()
@@ -360,36 +360,36 @@ pub fn init_vex_fmt_verifying_visitor() -> Vec<(&'static str, Box<dyn Check>)> {
 //             .contains("notexits"))
 //     }
 //
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_csaf_vex() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhsa-2021_3029.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhsa-2021_3029.json"))
 //                 .expect("example data must parse");
 //         assert_eq!(check_csaf_vex(&csaf).len(), 0);
 //     }
 //
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_history() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhsa-2021_3029.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhsa-2021_3029.json"))
 //                 .expect("example data must parse");
 //         assert_eq!(check_history(&csaf).len(), 0);
 //     }
 //
 //     /// Verify the csaf file does not have any vulnerabilities
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_vulnerabilities_product_status() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhsa-2023_1441.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhsa-2023_1441.json"))
 //                 .expect("example data must parse");
 //         assert_eq!(check_vulnerabilities_product_status(&csaf).len(), 1);
 //     }
 //
 //     /// Verify the csaf's vulnerabilities does not have cve and ids
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_vulnerabilities_cve_ids() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhsa-2023_1441.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhsa-2023_1441.json"))
 //                 .expect("example data must parse");
 //         assert!(check_vulnerabilities_cve_ids(&csaf)
 //             .first()
@@ -398,19 +398,19 @@ pub fn init_vex_fmt_verifying_visitor() -> Vec<(&'static str, Box<dyn Check>)> {
 //     }
 //
 //     /// Verify the csaf file does not have any vulnerabilities
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_vulnerabilities_size() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhsa-2023_3408.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhsa-2023_3408.json"))
 //                 .expect("example data must parse");
 //         assert_eq!(check_vulnerabilities_size(&csaf).len(), 1);
 //     }
 //
 //     /// Verify product do not match in branches and relationships
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_branches_relationships_product_match() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhsa-2023_4378.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhsa-2023_4378.json"))
 //                 .expect("example data must parse");
 //         assert!(check_branches_relationships_product_match(&csaf)
 //             .first()

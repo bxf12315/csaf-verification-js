@@ -66,25 +66,25 @@ pub fn init_csaf_base_verifying_visitor() -> Vec<(&'static str, Box<dyn Check>)>
     ]
 }
 
-// #[cfg(test)]
+// #[cfg(tests)]
 // mod tests {
 //     use crate::verification::check::base::{
 //         check_csaf_base, check_csaf_document_tracking_revision_history,
 //     };
 //     use csaf::Csaf;
 //
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_csaf_base() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhba-2023_0564.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhba-2023_0564.json"))
 //                 .expect("example data must parse");
 //         assert_eq!(check_csaf_base(&csaf).len(), 3)
 //     }
 //
-//     #[tokio::test]
+//     #[tokio::tests]
 //     async fn test_check_csaf_document_tracking_revision_history() {
 //         let csaf: Csaf =
-//             serde_json::from_str(include_str!("../../../../test-data/rhba-2023_0564.json"))
+//             serde_json::from_str(include_str!("../../../../tests-data/rhba-2023_0564.json"))
 //                 .expect("example data must parse");
 //         assert_eq!(
 //             check_csaf_document_tracking_revision_history(&csaf).len(),
